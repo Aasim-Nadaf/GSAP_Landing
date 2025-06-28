@@ -68,7 +68,7 @@ body {
     @apply fixed z-50 w-full lg:px-8;
 
     div {
-      @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
+      @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 px-5 container mx-auto;
     }
 
     p {
@@ -89,7 +89,7 @@ body {
   }
 
   #hero {
-    @apply relative z-10 min-h-dvh w-full border border-transparent;
+    @apply relative z-10 min-h-dvh w-full border border-transparent px-2;
 
     h1 {
       @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;

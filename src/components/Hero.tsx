@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
-  const videoRef = useRef();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
@@ -18,11 +18,11 @@ const Hero = () => {
       type: "lines",
     });
 
-    // Apply text-gradient class once before animating
     heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
     gsap.from(heroSplit.chars, {
       yPercent: 100,
+      opacity: 0,
       duration: 1.8,
       ease: "expo.out",
       stagger: 0.06,
@@ -63,12 +63,14 @@ const Hero = () => {
       },
     });
 
-    videoRef.current.onloadedmetadata = () => {
-      tl.to(videoRef.current, {
-        currentTime: videoRef.current.duration,
-        ease: "expo",
-      });
-    };
+    if (videoRef.current) {
+      videoRef.current.onloadedmetadata = () => {
+        tl.to(videoRef.current, {
+          currentTime: videoRef.current?.duration,
+          ease: "expo",
+        });
+      };
+    }
   }, []);
   return (
     <>
