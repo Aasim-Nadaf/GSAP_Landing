@@ -24,39 +24,41 @@ body {
   overflow-x: hidden;
 }
 
-@utility flex-center {
-  @apply flex justify-center items-center;
-}
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
 
-@utility col-center {
-  @apply flex flex-col justify-center items-center;
-}
+  .col-center {
+    @apply flex flex-col justify-center items-center;
+  }
 
-@utility abs-center {
-  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
-}
+  .abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
 
-@utility text-gradient {
-  background: linear-gradient(to bottom, #ffffff, #898989);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+  .text-gradient {
+    background: linear-gradient(to bottom, #ffffff, #898989);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
-@utility radial-gradient {
-  background: radial-gradient(
-    circle at center,
-    #434343 0%,
-    #000 50%,
-    transparent 100%
-  );
-}
+  .radial-gradient {
+    background: radial-gradient(
+      circle at center,
+      #434343 0%,
+      #000 50%,
+      transparent 100%
+    );
+  }
 
-@utility masked-img {
-  mask-image: url("/images/mask-img.png");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 50%;
+  .masked-img {
+    mask-image: url("/images/mask-img.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 50%;
+  }
 }
 
 @layer components {
