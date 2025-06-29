@@ -27,7 +27,7 @@ const Art = () => {
       })
       .to(".masked-img", {
         scale: 1.3,
-        duration: 3,
+        duration: 1,
         maskPosition: "center",
         maskSize: "400%",
         ease: "power1.inOut",
