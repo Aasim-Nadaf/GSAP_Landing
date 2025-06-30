@@ -89,7 +89,7 @@ body {
   }
 
   #hero {
-    @apply relative z-10 min-h-dvh w-full border border-transparent px-2;
+    @apply relative z-10 min-h-dvh w-full border border-transparent px-2 overflow-hidden;
 
     h1 {
       @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;
@@ -275,7 +275,7 @@ body {
   }
 
   #menu {
-    @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient;
+    @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient overflow-hidden;
 
     #m-left-leaf {
       @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;
